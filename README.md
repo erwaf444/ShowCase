@@ -14,6 +14,8 @@ OnAndOn Steam遊戲 - Steam遊戲ShowCase。
 
 以下是遊戲的影片連接：
 Long Way Home: https://youtu.be/xtCz2PM8Ads
+BreakOutGame: https://youtu.be/19v3p-CormE
+小貝克: https://youtu.be/R4uIxDAJoJY
 
 This repository is used to showcase the games I developed using the Unity engine.
 
