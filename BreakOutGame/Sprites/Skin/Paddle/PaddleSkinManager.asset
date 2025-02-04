@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c0dc2cc655e1146a72f90e9d3a380a, type: 3}
+  m_Name: PaddleSkinManager
+  m_EditorClassIdentifier: 
+  paddleSkins:
+  - cost: 0
+    sprite: {fileID: 21300000, guid: 88085ec8413a69845b917313a308f043, type: 3}
+  - cost: 120
+    sprite: {fileID: 21300000, guid: af9240a19e40f964d9848d796e7475a8, type: 3}
+  - cost: 120
+    sprite: {fileID: 21300000, guid: f5eeb4e6adde5bd419cd8b70683c9418, type: 3}
+  - cost: 120
+    sprite: {fileID: 21300000, guid: a3e3de3f8587a5247913710c7ae69da0, type: 3}
+  - cost: 80
+    sprite: {fileID: 21300000, guid: c09c74dcf1e2aee479fb0e3b442e5792, type: 3}
+  - cost: 150
+    sprite: {fileID: 21300000, guid: e27fe7cd460be414abe8a494e7192183, type: 3}
+  - cost: 200
+    sprite: {fileID: 21300000, guid: be650a5520718814a855568107835536, type: 3}
+  - cost: 300
+    sprite: {fileID: 21300000, guid: b8438ef8553a6df48a4ad2749c77b7e9, type: 3}

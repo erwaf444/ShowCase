@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: New Table_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 064fc6fb56689104b8c7b830cad78285, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 268169902599962710
+  m_TableData:
+  - m_Id: 370590191616
+    m_Localized: 'English
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378335589142528
+    m_Localized: Chinese(traditional)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378339640840192
+    m_Localized: Chinese(simplified)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388212776603648
+    m_Localized: Select language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 586859162210304
+    m_Localized: Start Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 587141308846080
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 587198653370368
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 587665567485952
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 587677680635904
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 587703379136512
+    m_Localized: Sound Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 591769484234752
+    m_Localized: Me
+    m_Metadata:
+      m_Items: []
+  - m_Id: 592808526581760
+    m_Localized: Kid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 596098433781760
+    m_Localized: '{0}xCompleted'
+    m_Metadata:
+      m_Items:
+      - rid: 268169902599962710
+  - m_Id: 1089160368984064
+    m_Localized: Income
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1089302732050432
+    m_Localized: Outlay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1090189743460352
+    m_Localized: Daily sales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1090426268651520
+    m_Localized: Bread income
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1090711279996928
+    m_Localized: Other income
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1090869052936192
+    m_Localized: Total income
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1091374181355520
+    m_Localized: Daily expenses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1091579362512896
+    m_Localized: Shop rent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1091891183849472
+    m_Localized: "\rIngredients cost"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1092219312640000
+    m_Localized: Equipment cost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1092538079744000
+    m_Localized: Other cost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1092721555378176
+    m_Localized: Total cost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1094880380424192
+    m_Localized: Little Baker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1095368664518656
+    m_Localized: Do you want to continue?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1095933083619328
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1096146988929024
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 268169902599962710
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 596098433781760

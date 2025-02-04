@@ -1,0 +1,1 @@
+SetNoteBoxImage 的 Sprite 和 Image問題

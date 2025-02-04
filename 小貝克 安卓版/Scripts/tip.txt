@@ -1,0 +1,2 @@
+商品的id提示和價格提示在PasserbySpawn.cs中
+玩家"清潔度", "食材新鮮度", "顧客滿意度"數值儲存在BookFlirstPageScript.cs中

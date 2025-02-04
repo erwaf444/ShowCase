@@ -1,0 +1,175 @@
+using System.Collections;
+using TMPro;
+using UnityEngine;
+
+public class TimeSystem : MonoBehaviour
+{
+
+    float TIMESCALE = 0.01f;
+
+    public TextMeshProUGUI monthText;
+    public TextMeshProUGUI clockText;
+    public TextMeshProUGUI dayText;
+    public TextMeshProUGUI seasonText;
+    public TextMeshProUGUI yearText;
+    public GameObject leafParticle;//秋天葉子
+    public GameObject snowParticle;//冬天雪花
+    public GameObject summerLeafParticle;//夏天葉子
+    public GameObject rainParticle;//春天下雨
+
+    public static double minute, hour, day, second, month, year;
+
+    private bool isPaused = false;
+    public Animator shopClosingAnimator;
+    public Animator shopClosingAccountAnimator;
+    public GameManager gameManagerScript;
+
+    void Start()
+    {
+        GameObject gameManagerObject = GameObject.Find("GameManager");
+        if (gameManagerObject != null)
+        {
+            gameManagerScript = gameManagerObject.GetComponent<GameManager>();
+        }
+        month = 1;
+        day = 1;
+        year = 2025;
+        hour = 16;
+        minute = 50;
+        second = 0;
+        leafParticle.SetActive(false);
+        snowParticle.SetActive(false);
+        summerLeafParticle.SetActive(false);
+        rainParticle.SetActive(false);
+    }
+
+    void Update()
+    {
+        shopClosingAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        shopClosingAccountAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        CalculateSeason();
+        CalculateTime();
+        CaculateMonth();
+        TextCallFunction();
+        
+        
+        
+        PauseGame();
+    }
+
+    void TextCallFunction()
+    {
+        dayText.text = day.ToString();
+        clockText.text = string.Format("{0:00}:{1:00}", (int)hour, (int)minute);
+        yearText.text = year.ToString();
+        monthText.text = month.ToString();
+    }
+
+    void CalculateSeason()
+    {
+        if(month == 12 || month == 1 || month == 2)
+        {
+            seasonText.text = "冬天";
+            snowParticle.SetActive(true);
+        }
+
+        if(month == 3 || month == 4 || month == 5)
+        {
+            seasonText.text = "春天";
+            rainParticle.SetActive(true);
+        }
+
+        if(month == 6 || month == 7 || month == 8)
+        {
+            seasonText.text = "夏天";
+            summerLeafParticle.SetActive(true);
+        }
+
+        if(month == 9 || month == 10 || month == 11)
+        {
+            seasonText.text = "秋天";
+            leafParticle.SetActive(true);
+        }
+    }
+
+    void CaculateMonth()
+    {
+        int daysInMonth = 31; // 默認為31天
+
+        // 確定當前月份的天數
+        if (month == 4 || month == 6 || month == 9 || month == 11)
+        {
+            daysInMonth = 30;
+        }
+        else if (month == 2)
+        {
+            // 簡單的閏年檢查（每4年一次，不考慮世紀年）
+            daysInMonth = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? 29 : 28;
+        }
+
+        // 檢查是否需要進入下一個月
+        if (day > daysInMonth)
+        {
+            day = 1;
+            month++;
+
+            // 檢查是否需要進入下一年
+            if (month > 12)
+            {
+                month = 1;
+                year++;
+            }
+
+            TextCallFunction();
+            CalculateSeason();
+        }
+
+       
+    }
+
+    void CalculateTime()
+    {
+        second += Time.deltaTime / TIMESCALE;
+
+        if(second > 60)
+        {
+            second = 0;
+            minute++;
+        } 
+        if (minute >= 60)
+        {
+            minute -= 60;
+            hour++;
+        }
+        if (hour >= 24)
+        {
+            hour -= 24;
+            day++;
+            CaculateMonth();
+        }
+        TextCallFunction();
+        
+    }
+
+    public void PauseGame()
+    {
+        StartCoroutine(PauseGameRoutine());
+    }
+
+    IEnumerator PauseGameRoutine()
+    {
+         if (hour == 17 && !isPaused)
+        {
+            AudioManager.instance.PlaySFX("ShopClosing");
+            Time.timeScale = 0; // 暫停遊戲
+            isPaused = true; // 設置暫停標記
+            gameManagerScript.canInteract = false;
+            shopClosingAnimator.SetTrigger("ShopClosing");
+            Debug.Log("ShopClosing Trigger Set");
+            yield return new WaitForSecondsRealtime(3f);
+            shopClosingAccountAnimator.SetTrigger("ShopClosingAccount");
+            Debug.Log("ShopClosingAccount Trigger Set");
+            Debug.Log("Game Paused at 17:00");
+        }
+    }
+}

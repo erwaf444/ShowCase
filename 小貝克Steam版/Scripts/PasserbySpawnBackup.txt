@@ -1,0 +1,177 @@
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+ 
+[System.Serializable]
+public class MenuItem 
+{ 
+    public int id; // 或者使用 string 类型，如果你希望 ID 更具可读性
+    //蛋糕id從0開始
+    //甜甜圈id從100開始
+    //麵包id從200開始
+    //杯子蛋糕id從300開始
+    //造型面包id從400開始
+    public Sprite image; // 对应的图片
+    public int price;
+}
+
+public class PasserbySpawn : MonoBehaviour
+{
+    public Player player;
+    public MakeTableTagSwitcher makeTableTagSwitcher;
+    public GameObject passerbyPrefab;
+    public Transform spawnPointA;
+    public Transform spawnPointB;
+    public int numberOfPasserbys;
+    public float stopChance;
+    public GameObject pointD;
+    public GameObject pointE;
+    public GameObject pointF;
+    // public Sprite[] menuOrder;
+    public MenuItem[] menuOrder;
+    private bool allowPasserbyToStop = true; // 標誌是否允許新路人停下
+
+    private List<Passerby> activePasserbys = new List<Passerby>();
+    private Dictionary<Transform, Passerby> stoppedPasserbys = new Dictionary<Transform, Passerby>();
+    private List<Transform> availableStopPoints = new List<Transform>();
+    private GameManager gameManager;
+
+
+    void Start()
+    {
+        GameObject gameManagerObject = GameObject.Find("GameManager");
+        if (gameManagerObject != null)
+        {
+            gameManager = gameManagerObject.GetComponent<GameManager>();
+        }
+        pointD = GameObject.Find("PointD");
+        pointE = GameObject.Find("PointE");
+        pointF = GameObject.Find("PointF");
+
+        availableStopPoints.Add(pointD.transform);
+        availableStopPoints.Add(pointE.transform);
+        availableStopPoints.Add(pointF.transform);
+
+        Debug.Log("Spawn coroutine started"); 
+        StartCoroutine(SpawnPasserbys());
+    }
+
+    IEnumerator SpawnPasserbys()
+    {
+        for (int i = 0; i < numberOfPasserbys; i++)
+        {
+            // Instantiate the prefab
+            GameObject passerbyObj = Instantiate(passerbyPrefab, spawnPointA.position, Quaternion.identity);
+            
+            Passerby passerbyScript = passerbyObj.GetComponent<Passerby>();
+            if (passerbyScript != null)
+            {
+                passerbyScript.pointA = spawnPointA.gameObject;
+                passerbyScript.pointB = spawnPointB.gameObject;
+            }
+
+            activePasserbys.Add(passerbyScript);
+
+            float randomValue  = Random.Range(0f, 1f);
+            if (availableStopPoints.Count > 0 && randomValue  < stopChance)
+            {
+                Debug.Log(randomValue);
+                // 随机停止
+                StopPasserby(passerbyScript);
+            }
+            
+
+            float randomInterval = Random.Range(2f, 5f);
+            yield return new WaitForSeconds(randomInterval);
+        }
+    }
+
+    private void StopPasserby(Passerby passerby)
+    {
+        if (availableStopPoints.Count == 0) return;
+
+        int randomIndex = Random.Range(0, availableStopPoints.Count);
+        Transform selectedStopPoint = availableStopPoints[randomIndex];
+        availableStopPoints.RemoveAt(randomIndex);
+
+        // // 选择符合条件的菜单项
+        // List<MenuItem> validMenuItems = new List<MenuItem>();
+
+        // foreach (var tagGroup in makeTableTagSwitcher.tagImageGroups)
+        // {
+        //    foreach (var imageWithExperience in tagGroup.imagesWithExperience)
+        //     {
+        //         if (player.experiencePoints > imageWithExperience.experiencePoints) // 过滤条件
+        //         {
+        //             foreach (var menuItem in menuOrder)
+        //             {      
+        //                 validMenuItems.Add(menuItem); // 添加符合条件的菜单项
+        //             }
+        //         }
+        //     }
+        // }
+
+        MenuItem selectedImage = menuOrder[Random.Range(0, menuOrder.Length)];
+        passerby.SetStopPoint(selectedStopPoint);
+        passerby.ShowImage(selectedImage.image, selectedImage.id, selectedImage.price);
+        
+        
+        Rigidbody2D rb = passerby.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+        }
+        
+        stoppedPasserbys[selectedStopPoint] = passerby;
+        StartCoroutine(HandlePasserbyStop(passerby, selectedStopPoint));
+    }
+
+    IEnumerator HandlePasserbyStop(Passerby passerby, Transform stopPoint)
+    {
+        float stopDuration = 30f;
+        yield return new WaitForSeconds(stopDuration);
+
+        if (stoppedPasserbys.ContainsKey(stopPoint) && stoppedPasserbys[stopPoint] == passerby)
+        {
+            ResumePasserby(passerby, stopPoint);
+        }
+    }
+ 
+    public void ResumePasserby(Passerby passerby, Transform stopPoint)
+    {
+        gameManager.MinusPlayerCustomerHappyValue();
+        passerby.shouldStop = false;
+        Rigidbody2D rb = passerby.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = new Vector2(passerby.speed, 0f);
+        }
+        passerby.HideImage();
+        stoppedPasserbys.Remove(stopPoint);
+        availableStopPoints.Add(stopPoint);
+    }
+
+    public void GetFoodAndResumePasserby(Passerby passerby, Transform stopPoint)
+    {
+        passerby.shouldStop = false;
+        Rigidbody2D rb = passerby.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = new Vector2(passerby.speed, 0f);
+        }
+        passerby.HideImage();
+        stoppedPasserbys.Remove(stopPoint);
+        availableStopPoints.Add(stopPoint);
+    }
+
+    public List<Passerby> GetStoppedPasserbys()
+    {
+        return new List<Passerby>(stoppedPasserbys.Values);
+    }
+
+    public bool IsStopPointAvailable()
+    {
+        return availableStopPoints.Count > 0;
+    }
+}

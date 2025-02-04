@@ -1,0 +1,8 @@
+第一點，按下滑鼠左鍵可以蓄力發射
+第二點，每一個物體都可以被吸附，但不能被重複連續吸附，吸附物體的時候，不用蓄力就能夠發射
+第三點，連續吸附不同物體，發射的力道越遠
+
+First.Pressing the left mouse button allows you to charge and launch.
+Second.Every object can be attached, but it cannot be attached consecutively more than once. When attaching an object, you can launch it without charging.
+Third.Consecutively attaching different objects increases the launch force.
+End.Enjoy!

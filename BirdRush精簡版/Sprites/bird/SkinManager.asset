@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4040281f3a69196448aedc4c4c101e0b, type: 3}
+  m_Name: SkinManager
+  m_EditorClassIdentifier: 
+  skins:
+  - cost: 0
+    sprite: {fileID: -855298285791758126, guid: 0ae8223dcfa57dc41b300e051e4f4a68, type: 3}
+    animationSprites:
+    - {fileID: -855298285791758126, guid: 0ae8223dcfa57dc41b300e051e4f4a68, type: 3}
+    - {fileID: 6937817954938267909, guid: e8bde9cfd0fc8464b8cf00da2b091199, type: 3}
+    - {fileID: -6470460504253458178, guid: d621248d077544540a536791684da0f4, type: 3}
+    birdName: "\u767D\u9CE5"
+    birdScore: 900
+  - cost: 10
+    sprite: {fileID: 5849526724001025608, guid: 61a0e6b02b6db4e45897de0b7cbf36e3, type: 3}
+    animationSprites:
+    - {fileID: 5849526724001025608, guid: 61a0e6b02b6db4e45897de0b7cbf36e3, type: 3}
+    - {fileID: -8544103997517715668, guid: fe2b0a53ce26c9548a5ae74f94b41101, type: 3}
+    - {fileID: 4907604547770047860, guid: be3763dad9413b440857acc789e32ec3, type: 3}
+    birdName: "\u7DA0\u9CE5"
+    birdScore: 130
+  - cost: 20
+    sprite: {fileID: -4003619540088408361, guid: a3b1d4076a17493408b1541662600a9c, type: 3}
+    animationSprites:
+    - {fileID: -2131785505994478718, guid: 6e7cd343047eb434c8d7e04dd2c77e9f, type: 3}
+    - {fileID: -4003619540088408361, guid: a3b1d4076a17493408b1541662600a9c, type: 3}
+    - {fileID: 3249053305001487767, guid: 83ad9a85c7ff62a41bfaee9d2a1382d7, type: 3}
+    birdName: "\u85CD\u8272\u80D6\u9CE5"
+    birdScore: 1500
+  - cost: 30
+    sprite: {fileID: -4249962446042156483, guid: 4bfcddf0e4c092740ba788687a033d53, type: 3}
+    animationSprites:
+    - {fileID: -4367358208268341643, guid: dae23288879456343b15483ff606fdf0, type: 3}
+    - {fileID: -4249962446042156483, guid: 4bfcddf0e4c092740ba788687a033d53, type: 3}
+    - {fileID: -2242018154937889457, guid: e20913b8cb1aaa34e8f2a3c4a83265d4, type: 3}
+    birdName: "\u85CD\u8272\u6230\u795E"
+    birdScore: 1800

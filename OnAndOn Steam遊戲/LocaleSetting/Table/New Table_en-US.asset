@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: New Table_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 8b9e7157e48b0414b881c706b8bbf752, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 23280848896
+    m_Localized: "Oh! You finally started? Awesome!|3\nI was starting to think you\u2019d
+      press the 'Start Game' button one more time, |2.9\nthen go grab a cup of coffee
+      or something.|3.1\r\nAnyway, now that you're in, get ready for the challenge!|3\n
+      You know, the time in this game won\u2019t wait for you.|3\n It's like one
+      of those situations where the bus never waits for you.\r\n"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
