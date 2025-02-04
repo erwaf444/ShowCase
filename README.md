@@ -13,18 +13,16 @@ OnAndOn Steam遊戲 - Steam遊戲ShowCase。
 筆記app - 使用Unity做成的筆記app，適用於安卓平台。
 
 以下是遊戲的影片連接：  
-
 **Long Way Home:**  
 [https://youtu.be/xtCz2PM8Ads](https://youtu.be/xtCz2PM8Ads)  
-
 **BreakOutGame:**  
 [https://youtu.be/19v3p-CormE](https://youtu.be/19v3p-CormE)  
-
 **小貝克:**  
 [https://youtu.be/R4uIxDAJoJY](https://youtu.be/R4uIxDAJoJY)  
-
 **勇者之塔:**  
 [https://youtu.be/tofF1YLSKJ8](https://youtu.be/tofF1YLSKJ8)  
+**筆記App:**  
+[https://youtu.be/eU515K1qktg](https://youtu.be/eU515K1qktg)  
 
 
 This repository is used to showcase the games I developed using the Unity engine.
