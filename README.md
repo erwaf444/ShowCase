@@ -36,3 +36,16 @@ Tower of Heroes Card Game – A card game based on Rock-Paper-Scissors logic.
 Little Baker Android Version – A bakery management simulation game for Android.
 Little Baker Steam Version – A bakery management simulation game for Steam.
 Notes App – A note-taking app built with Unity, designed for Android.
+
+
+Here is the video link to the game:
+**Long Way Home:**  
+[https://youtu.be/xtCz2PM8Ads](https://youtu.be/xtCz2PM8Ads)  
+**BreakOutGame:**  
+[https://youtu.be/19v3p-CormE](https://youtu.be/19v3p-CormE)  
+**小貝克:**  
+[https://youtu.be/R4uIxDAJoJY](https://youtu.be/R4uIxDAJoJY)  
+**勇者之塔:**  
+[https://youtu.be/tofF1YLSKJ8](https://youtu.be/tofF1YLSKJ8)  
+**筆記App:**  
+[https://youtu.be/eU515K1qktg](https://youtu.be/eU515K1qktg)  
