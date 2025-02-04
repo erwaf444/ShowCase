@@ -12,6 +12,9 @@ OnAndOn Steam遊戲 - Steam遊戲ShowCase。
 小貝克 Steam版本 - 經營麵包店養成遊戲，Steam版本。
 筆記app - 使用Unity做成的筆記app，適用於安卓平台。
 
+以下是遊戲的影片連接：
+Long Way Home: https://youtu.be/xtCz2PM8Ads
+
 This repository is used to showcase the games I developed using the Unity engine.
 
 It includes various types of game examples, demonstrating in-game logic, UI design, physics engine interactions, and common game development features.
