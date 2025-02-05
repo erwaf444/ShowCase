@@ -52,10 +52,10 @@ Here is the video link to the game:
 
 
 ## 其他程式語言作品鏈接：
-- **Horizongo**  
+- **Horizongo**  Nextjs
   [Horizongo 連結](https://youtu.be/t5du44w7lDc)
-- **告白墻**  
+- **告白墻**  Nextjs
   [告白墻 連結](https://youtu.be/RsKrcQSa418)
-- **ChefAi**  
+- **ChefAi**  React Native
   [ChefAi 連結](https://youtu.be/kB9K6O14j-A)
 
