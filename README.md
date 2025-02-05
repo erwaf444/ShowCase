@@ -49,3 +49,13 @@ Here is the video link to the game:
 [https://youtu.be/tofF1YLSKJ8](https://youtu.be/tofF1YLSKJ8)  
 **筆記App:**  
 [https://youtu.be/eU515K1qktg](https://youtu.be/eU515K1qktg)  
+
+
+## 其他程式語言作品鏈接：
+- **Horizongo**  
+  [Horizongo 連結](https://youtu.be/t5du44w7lDc)
+- **告白墻**  
+  [告白墻 連結](https://youtu.be/RsKrcQSa418)
+- **ChefAi**  
+  [ChefAi 連結](https://youtu.be/kB9K6O14j-A)
+
