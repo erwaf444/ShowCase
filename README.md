@@ -1,9 +1,16 @@
-Unity 遊戲程式展示庫 / Unity Game Showcase Repository
+程式展示庫 / Showcase Repository
 
-這個庫是用來展示我使用 Unity 引擎 開發的遊戲程式。
+這個庫是用來展示我開發、練習的各種專案
 
-庫中包含了不同類型的遊戲範例。這些範例展示了遊戲內部邏輯、UI 設計、物理引擎運作、以及一些常見的遊戲開發功能。
+kaggle：
+https://www.kaggle.com/code/changchiayeah/notebooka426ace748
+https://www.kaggle.com/code/changchiayeah/notebooke34d26d6ea
+https://www.kaggle.com/code/changchiayeah/welding-defect-yolov8
+https://www.kaggle.com/code/changchiayeah/yolov8-mus3000
 
+
+
+Unity:
 - **BreakOutGame**  
   擊打磚塊遊戲，包含了金流（IAP）、廣告、皮膚、關卡系統。
 - **BirdRush精簡版**  
@@ -32,10 +39,22 @@ Unity 遊戲程式展示庫 / Unity Game Showcase Repository
 [https://youtu.be/eU515K1qktg](https://youtu.be/eU515K1qktg)  
 
 
-This repository is used to showcase the games I developed using the Unity engine.
 
-It includes various types of game examples, demonstrating in-game logic, UI design, physics engine interactions, and common game development features.
 
+
+
+ENGLISH:
+This repository is used to showcase the I developed.
+
+kaggle：
+https://www.kaggle.com/code/changchiayeah/notebooka426ace748
+https://www.kaggle.com/code/changchiayeah/notebooke34d26d6ea
+https://www.kaggle.com/code/changchiayeah/welding-defect-yolov8
+https://www.kaggle.com/code/changchiayeah/yolov8-mus3000
+
+
+
+Unity:
 - **BreakOutGame**  
   A brick-breaking game featuring in-app purchases (IAP), ads, skins, and a level system.
 - **BirdRush Lite**  
@@ -64,6 +83,9 @@ Here is the video link to the game:
 [https://youtu.be/tofF1YLSKJ8](https://youtu.be/tofF1YLSKJ8)  
 **筆記App:**  
 [https://youtu.be/eU515K1qktg](https://youtu.be/eU515K1qktg)  
+
+
+
 
 
 ## 其他程式語言作品鏈接：
