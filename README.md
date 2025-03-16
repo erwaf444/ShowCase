@@ -88,7 +88,7 @@ Here is the video link to the game:
 
 
 
-## 其他程式語言作品鏈接：
+## 其他程式語言作品鏈接，僅是個人愛好專案，非成品：
 - **Horizongo**  Nextjs
   [Horizongo 連結](https://youtu.be/t5du44w7lDc)
 - **告白墻**  Nextjs
